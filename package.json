@@ -1,0 +1,34 @@
+{
+  "name": "habitual-wealth",
+  "version": "0.0.1",
+  "description": "Habitual Wealth is an open source personal finance application. This applications is spearheaded through POE Innovations. We believe personal finance knowledge and tools should be freely available to all. ",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "personal",
+    "finance",
+    "wealth",
+    "money",
+    "prosperity"
+  ],
+  "author": "Andrew T. Poe",
+  "license": "MIT",
+  "dependencies": {
+    "browserify": "^12.0.1",
+    "browserify-incremental": "^3.0.1",
+    "history": "^1.13.1",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-router": "^1.0.0",
+    "reactify": "^1.1.1",
+    "redux": "^3.0.4",
+    "redux-router": "^0.1.0",
+    "redux-thunk": "^1.0.0",
+    "superagent": "^1.4.0"
+  }
+}
