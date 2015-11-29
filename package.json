@@ -1,7 +1,7 @@
 {
   "name": "habitual-wealth",
   "version": "0.0.1",
-  "description": "Habitual Wealth is an open source personal finance application. This applications is spearheaded through POE Innovations. We believe personal finance knowledge and tools should be freely available to all. ",
+  "description": "Habitual Wealth is an open source personal finance application. This application is spearheaded through POE Innovations. We believe personal finance knowledge and tools should be freely available to all.",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -9,6 +9,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:poe-innovations-llc/habitual-wealth.git"
+  },
+  "homepage": "https://habitualwealth.com",
   "keywords": [
     "personal",
     "finance",
@@ -16,8 +21,15 @@
     "money",
     "prosperity"
   ],
-  "author": "Andrew T. Poe",
+  "author": "POE Innovations, LLC",
   "license": "MIT",
+  "browserify": {
+    "transform": [
+      [
+        "reactify"
+      ]
+    ]
+  },
   "dependencies": {
     "browserify": "^12.0.1",
     "browserify-incremental": "^3.0.1",
