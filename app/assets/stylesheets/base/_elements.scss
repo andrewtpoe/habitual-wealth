@@ -1,0 +1,48 @@
+// Default HTML element styling:
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+html,
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: $background;
+}
+body {
+  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Tahoma", "Helvetica Neue", "Lucida Grande", sans-serif;
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 30px;
+  color: $text;
+}
+h1 {
+}
+h2 {
+}
+h3 {
+}
+p {
+}
+a {
+}
+ul {
+}
+li {
+}
+button {
+  cursor: pointer;
+}
+input,
+input[type='text'],
+input[type='number'] {
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin: 0;
+}

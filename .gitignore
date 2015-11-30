@@ -62,7 +62,6 @@ config/secrets.yml
 .env
 .git
 *.rdb
-.foreman
 node_modules/
 
 ### Ruby ###

@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    = tag :meta, description: I18n.translate('application.root.description')
+    %title= content_for?(:title) ? yield(:title) : t('application.root.title')
+    %meta{name: "robots", content: "NOODP"}/
+    %meta{name: "language", http: {equiv: 'content-language'}, content: "en-US"}/
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1"}/
+    = stylesheet_link_tag 'application', media: 'all'
+    = csrf_meta_tags
+  %body{ ontouchstart: "" }
+    = yield
+    = javascript_include_tag 'application', async:true
+    -# Add Google Analytics script here
+    -# - if Rails.env == 'production'
+    -#   %script
