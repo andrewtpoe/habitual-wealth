@@ -11,6 +11,7 @@ gem 'devise'
 gem 'exception_notification'
 gem 'font-awesome-rails'
 gem 'haml-rails'
+gem 'has_permalink'
 gem 'jbuilder', '~> 2.0'
 gem 'puma'
 gem 'rails_12factor', group: :production
@@ -43,7 +44,6 @@ end
 # gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 # gem 'devise-async'
 # gem 'fog-aws'
-# gem 'has_permalink'
 # gem 'paranoia', '~> 2.0'
 # gem 'shareable'
 # gem 'sinatra', require: nil
