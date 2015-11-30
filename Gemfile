@@ -6,6 +6,7 @@ gem 'rails', '4.2.3'
 gem 'pg'
 
 gem 'browserify-rails'
+gem 'celluloid', ' 0.16.0'
 gem 'devise'
 gem 'exception_notification'
 gem 'font-awesome-rails'
@@ -40,7 +41,6 @@ end
 
 
 # gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
-# gem 'celluloid', ' 0.16.0'
 # gem 'devise-async'
 # gem 'fog-aws'
 # gem 'has_permalink'
