@@ -1,3 +1,9 @@
+.home__githubRibbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+}
 .home__fillerHeader {
   @include transformTranslate(-50%, -50%);
   position: absolute;
