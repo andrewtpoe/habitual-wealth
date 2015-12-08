@@ -1,14 +1,14 @@
 # Habitual Wealth
 
-I am passionate about pursuing excellence in my finances with Biblical principles. The Habitual Wealth web application is an extension of my desire to help you win with your finances as well.
+The Habitual Wealth web application is designed to help everyone passionate about pursuing excellence in their finances through Biblical principles.
 
 ## Project vision:
 
-My mission is to provide a free budgeting tool that promotes prosperity based on Biblical values and principles.
+This project's mission is to provide a free, open source budgeting tool that promotes prosperity based on Biblical values and principles.
 
-This project will become a responsive single page application backed by a Rails API and rendered in React. Our humble beginning starts with the budgeting spreadsheet that my family uses for our own finances. [Here is a raw template of that budget](https://docs.google.com/spreadsheets/d/1JcfALRq4fZpRa92dRHcVvf24uW0dJ8jxEFhsZY6itr4/edit?usp=sharing).
+Habitual Wealth is planned as a responsive single page application backed by a Rails API and rendered in ReactJS. Our humble beginning starts with the budgeting spreadsheet that my family uses for our own finances. [Here is a raw template of that budget](https://docs.google.com/spreadsheets/d/1JcfALRq4fZpRa92dRHcVvf24uW0dJ8jxEFhsZY6itr4/edit?usp=sharing). The project will begin by recreating the basic functionality of this spreadsheet (which has served us well for over a year), then expand on that to provide improved coverage for different budgeting needs.
 
-Additionally, this project will be accompanied by the Habitual Wealth Blog, where I will share my own personal thoughts on Biblical personal finance.
+Additionally, this project will be accompanied by the Habitual Wealth Blog, where I, and others, will share our personal thoughts on Biblical personal finance. Please note, I am not an accountant, nor am I exceedingly wealthy (yet). I am a student of observation and continuously seeking to learn though. Follow any advice found on this site at your own risk and under your own judgement.
 
 ## Primary Tech Stack:
 
