@@ -1,0 +1,7 @@
+.home__fillerHeader {
+  @include transformTranslate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+}
