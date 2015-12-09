@@ -13,12 +13,12 @@ Rails.application.routes.draw do
   get 'blog', to: 'posts#index'
   resources :post, except: [ :index ]
 
-  devise_for :users, controllers: {
-    registrations: 'users/registrations',
-    passwords: 'users/passwords',
-    sessions: 'users/sessions',
-    confirmations: 'users/confirmations',
-    unlocks: 'users/unlocks'
-  }
+  # devise_for :users, controllers: {
+  #   registrations: 'users/registrations',
+  #   passwords: 'users/passwords',
+  #   sessions: 'users/sessions',
+  #   confirmations: 'users/confirmations',
+  #   unlocks: 'users/unlocks'
+  # }
 
 end
