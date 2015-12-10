@@ -1,0 +1,33 @@
+.app__loadFailed {
+  margin: 25px;
+  max-width: 400px;
+  @media all and (min-width: $s-min) {
+    margin: 50px;
+  }
+}
+.app__loadingBackground {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $background;
+}
+.app__loadingContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.app__loadingImage {
+  @include transformTranslate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 250px;
+  width: 250px;
+  border-radius: 125px;
+  background-image: url( image_path("HW-app-loading.gif"));
+  background-position: center, center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
