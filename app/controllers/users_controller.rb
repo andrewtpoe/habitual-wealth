@@ -19,7 +19,6 @@ class UsersController < ApplicationController
       @user.email = p[:email]
       @user.password = p[:password]
       if @user.save
-        binding.pry
         sign_in(:user, @user)
       end
     else
