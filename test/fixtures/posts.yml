@@ -1,11 +1,7 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+one: 
+  title: Test blog post
+  body: This is a string of text that represents an articles body
 
-# This model initially had no columns defined.  If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+two:
+  title: Second test blog post
+  body: This is a string of text that represents an articles body
