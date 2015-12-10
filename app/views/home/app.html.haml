@@ -1,0 +1,21 @@
+%section{ class: 'app', data: {js: 'app_main'} }
+  .container-fluid.container-table
+    .row.vertical-center-row
+      .col-xs-10.col-xs-offset-1
+        .app__loadFailed
+          %h1.home__title
+            Habitual Wealth
+          %p This application requires JavaScript. Please enable it in your browser and refresh the page.
+
+
+  :javascript
+    var div = document.querySelector('[data-js=app_main]');
+    var background = document.createElement('DIV');
+    background.classList.add('app__loadingBackground');
+    var container = document.createElement('DIV');
+    container.classList.add('app__loadingContainer');
+    var image = document.createElement('DIV');
+    image.classList.add('app__loadingImage');
+    container.appendChild(image);
+    background.appendChild(container);
+    div.appendChild(background);

@@ -1,7 +1,9 @@
 @import
-  'font-awesome',
-  'base/normalize',
   'base/variables',
+  'bootstrap',
   'base/mixins',
   'base/elements',
-  'layouts/home';
+  'layouts/container',
+  'layouts/home',
+  'layouts/app',
+  'modules/logo';

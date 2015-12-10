@@ -1,17 +1,23 @@
 // GLOBAL VARIABLES
 
 // Colors:
-$background: #ffffff;
+$background: #fefefe;
+$block: #f1f1f1;
+$blue: #2249c8;
+$red: #aa0000;
+$yellow: #fff921;
+$green: #089e08;
 $text: #666666;
 
 // Break points:
 $s-min: 480px;
 $m-min: 768px;
 $l-min: 1080px;
-$xl-min: 1350px;
 
-// Content Width:
-$s-width: 90%;
-$m-width: 80%;
-$l-width: 70%;
-$xl-width: 60%;
+// Bootstrap variables
+$body-bg: $background;
+$text-color: $text;
+$brand-primary: $blue;
+$brand-success: $green;
+$brand-info: $yellow;
+$brand-danger: $red;
