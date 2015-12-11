@@ -1,4 +1,17 @@
+.home__githubRibbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  min-width: 75px;
+  max-width: 175px;
+  outline: none;
+  img {
+    width: 100%;
+  }
+}
 .home__signup {
+  width: 100%;
   max-width: 350px;
 }
 .home__title {
