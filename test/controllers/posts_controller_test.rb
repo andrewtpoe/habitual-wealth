@@ -6,8 +6,6 @@ class PostsControllerTest < ActionController::TestCase
   end
 
   test 'GET #index returns an array of all posts' do
-    get :index
-    assert_response :success
   end
 
 end

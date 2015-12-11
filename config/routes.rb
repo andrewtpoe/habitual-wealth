@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+
   root 'home#index'
 
   get 'app', to: 'home#app'
@@ -15,13 +17,8 @@ Rails.application.routes.draw do
   get 'blog', to: 'posts#index'
   resources :post, except: [ :index ]
 
-  post 'sign_up', to: 'users#sign_up'
-  devise_for :users, controllers: {
-    registrations: 'users/registrations',
-    sessions: 'users/sessions',
-    # passwords: 'users/passwords',
-    # confirmations: 'users/confirmations',
-    # unlocks: 'users/unlocks'
-  }
-
+  namespace :api, defaults: { format: 'json' } do
+    post 'log_in', to: 'users#log_in'
+    post 'sign_up', to: 'users#sign_up'
+  end
 end
