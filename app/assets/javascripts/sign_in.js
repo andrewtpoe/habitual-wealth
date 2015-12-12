@@ -70,9 +70,7 @@ var users = function() {
   }
 
   var buildWarningDiv = function(form, errors) {
-    console.log(errors);
     if (errors.hasOwnProperty('password')) {
-      console.log('build password warning');
       var passwordWarning = form.querySelector('[data-js=password-warning]');
       if (passwordWarning) {
         passwordWarning.remove();
@@ -94,7 +92,6 @@ var users = function() {
       }
     }
     if (errors.hasOwnProperty('email')) {
-      console.log('build email warning');
       var emailWarning = form.querySelector('[data-js=email-warning]');
       if (emailWarning) {
         emailWarning.remove();
