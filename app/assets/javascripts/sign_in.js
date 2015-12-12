@@ -1,4 +1,4 @@
-var Request = require('superagent');
+var Ajax = require('./ajax.js');
 
 var users = function() {
 
@@ -35,9 +35,9 @@ var users = function() {
           password: password
         }
       }
-      postData(url, formData, function(err, res) {
+      Ajax.postData(url, formData, function(err, res) {
         if (err) {
-          alert(err);
+          this.buildWarningDiv();
         } else {
           window.location.href = '/app';
         }
@@ -59,9 +59,9 @@ var users = function() {
           password_confirmation: passwordConfirmation
         }
       }
-      postData(url, formData, function(err, res) {
+      Ajax.postData(url, formData, function(err, res) {
         if (err) {
-          alert(err);
+          this.buildWarningDiv();
         } else {
           window.location.href = '/app';
         }
@@ -69,17 +69,8 @@ var users = function() {
     })
   }
 
-
-  var postData = function(url, formData, callback) {
-    console.log('posting data');
-    var token = document.getElementsByName('csrf-token')[0].content;
-    Request
-    .post(url)
-    .send(formData)
-    .set('Accept', 'application/json')
-    .set('Content-Type', 'application/json')
-    .set('X-CSRF-Token', token)
-    .end(callback);
+  buildWarningDiv: function() {
+    console.log(err.status);
   }
 
 };

@@ -9,11 +9,11 @@ class Api::UsersController < ApplicationController
         render template: 'api/users/object', status: 200 and return
       else
         @errors = { password: [ 'incorrect password' ] }
-        render template: 'api/errors', status: 401 and return
+        render template: 'api/errors', status: 403 and return
       end
     else
       @errors = { email: [ 'email not found' ] }
-      render template: 'api/errors', status: 401 and return
+      render template: 'api/errors', status: 404 and return
     end
   end
 
