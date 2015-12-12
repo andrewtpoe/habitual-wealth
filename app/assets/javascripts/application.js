@@ -1,2 +1,3 @@
 require ('./bootstrap-native.min.js');
-require ('./users.js')();
+require ('./sign_in.js')();
+require ('./app.react.js')();

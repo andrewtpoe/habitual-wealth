@@ -9,18 +9,19 @@ class Api::UsersController < ApplicationController
         render template: 'api/users/object', status: 200 and return
       else
         @errors = { password: [ 'incorrect password' ] }
-        render template: 'api/errors', status: 401 and return
+        render template: 'api/errors', status: 403 and return
       end
     else
       @errors = { email: [ 'email not found' ] }
-      render template: 'api/errors', status: 401 and return
+      render template: 'api/errors', status: 404 and return
     end
   end
 
   def sign_up
     p = get_login_info
     if @current_user = User.find_by(email: p[:email])
-      log_in
+      @errors = { email: [ 'email already in use' ] }
+      render template: 'api/errors', status: 401 and return
     else
       if p[:password] == p[:password_confirmation]
         @current_user = User.new

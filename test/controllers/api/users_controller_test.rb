@@ -29,7 +29,7 @@ class Api::UsersControllerTest < ActionController::TestCase
       format: :json
     }
     post :log_in, params
-    assert_response 401
+    assert_response 403
     r = JSON.parse(@response.body).deep_symbolize_keys
     assert r[:errors].include?(:password)
   end
@@ -43,7 +43,7 @@ class Api::UsersControllerTest < ActionController::TestCase
       format: :json
     }
     post :log_in, params
-    assert_response 401
+    assert_response 404
     r = JSON.parse(@response.body).deep_symbolize_keys
     assert r[:errors].include?(:email)
   end
@@ -109,7 +109,7 @@ class Api::UsersControllerTest < ActionController::TestCase
     end
   end
 
-  test 'POST #sign_up will not register a new user with same email as an existing user' do
+  test 'POST #sign_up will not register a new user with same email as an existing user, returns error' do
     number_of_users = User.all.length
     params = {
       user: {
@@ -121,12 +121,12 @@ class Api::UsersControllerTest < ActionController::TestCase
     }
     refute @current_user.current_sign_in_at
     post :sign_up, params
-    assert_response 200
+    assert_response 401
     assert User.all.length == number_of_users
     @current_user.reload
-    assert @current_user.current_sign_in_at
+    refute @current_user.current_sign_in_at
     r = JSON.parse(@response.body).deep_symbolize_keys
-    assert valid_user_object(r)
+    assert r[:errors].include?(:email)
   end
 
   test 'POST #create will not register a new user if password is not at least 8 characters' do
