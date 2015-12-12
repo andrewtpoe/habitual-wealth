@@ -37,7 +37,7 @@ var users = function() {
       }
       Ajax.postData(url, formData, function(err, res) {
         if (err) {
-          this.buildWarningDiv();
+          buildWarningDiv(signInForm, res.body.errors);
         } else {
           window.location.href = '/app';
         }
@@ -61,7 +61,7 @@ var users = function() {
       }
       Ajax.postData(url, formData, function(err, res) {
         if (err) {
-          this.buildWarningDiv();
+          buildWarningDiv(signUpForm, res.body.errors);
         } else {
           window.location.href = '/app';
         }
@@ -69,8 +69,57 @@ var users = function() {
     })
   }
 
-  buildWarningDiv: function() {
-    console.log(err.status);
+  var buildWarningDiv = function(form, errors) {
+    console.log(errors);
+    if (errors.hasOwnProperty('password')) {
+      console.log('build password warning');
+      var passwordWarning = form.querySelector('[data-js=password-warning]');
+      if (passwordWarning) {
+        passwordWarning.remove();
+      }
+      var passwordGroup = form.querySelector('[data-js=password-group]');
+      passwordGroup.classList.add('has-error');
+      var warning = document.createElement('div');
+      warning.setAttribute('data-js', 'password-warning');
+      warning.className = 'text-danger';
+      warning.innerHTML = errors.password[0];
+      var warningDiv = form.querySelector('[data-js=warning]');
+      warningDiv.appendChild(warning);
+    } else {
+      var passwordGroup = form.querySelector('[data-js=password-group]');
+      passwordGroup.classList.remove('has-error');
+      var passwordWarning = form.querySelector('[data-js=password-warning]');
+      if (passwordWarning) {
+        passwordWarning.remove();
+      }
+    }
+    if (errors.hasOwnProperty('email')) {
+      console.log('build email warning');
+      var emailWarning = form.querySelector('[data-js=email-warning]');
+      if (emailWarning) {
+        emailWarning.remove();
+      }
+      var emailGroup = form.querySelector('[data-js=email-group]');
+      emailGroup.classList.add('has-error');
+      var warning = document.createElement('div');
+      warning.setAttribute('data-js', 'email-warning');
+      warning.className = 'text-danger';
+      warning.innerHTML = errors.email[0];
+      var warningDiv = form.querySelector('[data-js=warning]');
+      var passwordWarning = form.querySelector('[data-js=password-warning]');
+      if (passwordWarning) {
+        warningDiv.insertBefore(warning, passwordWarning)
+      } else {
+        warningDiv.appendChild(warning);
+      }
+    } else {
+      var emailGroup = form.querySelector('[data-js=email-group]');
+      emailGroup.classList.remove('has-error');
+      var emailWarning = form.querySelector('[data-js=email-warning]');
+      if (emailWarning) {
+        emailWarning.remove();
+      }
+    }
   }
 
 };
