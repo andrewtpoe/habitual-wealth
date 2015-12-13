@@ -16,6 +16,7 @@ gem 'jbuilder', '~> 2.0'
 # gem 'pundit'
 gem 'puma'
 gem 'rails_12factor', group: :production
+# gem 'rails_real_favicon'
 gem 'sass-rails', '~> 5.0'
 gem 'sidekiq'
 # gem 'tinymce-rails'
