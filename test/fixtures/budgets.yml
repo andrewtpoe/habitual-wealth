@@ -1,0 +1,20 @@
+one:
+  profile: one
+  start_date: <%= Date.today.beginning_of_month %>
+  end_date: <%= Date.today.end_of_month %>
+  month: <%= Date.today.strftime('%B') %>
+  year: <%= Date.today.year %>
+
+two:
+  profile: one
+  start_date: <%= (Date.today - 1.month).beginning_of_month %>
+  end_date: <%= (Date.today - 1.month).end_of_month %>
+  month: <%= (Date.today - 1.month).strftime('%B') %>
+  year: <%= (Date.today - 1.month).year %>
+
+three:
+  profile: two
+  start_date: <%= Date.today.beginning_of_month %>
+  end_date: <%= Date.today.end_of_month %>
+  month: <%= Date.today.strftime('%B') %>
+  year: <%= Date.today.year %>

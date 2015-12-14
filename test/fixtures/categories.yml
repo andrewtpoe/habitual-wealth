@@ -1,0 +1,13 @@
+one:
+  account: one
+  name: buffer
+  type: income
+  balance_at_bob: 0
+  allocated_at_bob: 0
+
+two:
+  account: one
+  name: overdraft
+  type: essential
+  balance_at_bob: 0
+  allocated_at_bob: 0

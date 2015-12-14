@@ -1,0 +1,65 @@
+b1_income:
+  budget: one
+  name: income
+  type: income
+  institution: internal
+
+b1_expense:
+  budget: one
+  name: expense
+  type: expense
+  institution: internal
+
+one:
+  budget: one
+  name: Primary Checking
+  type: asset
+  institution: Bank of America
+
+two:
+  budget: one
+  name: 401k - Boring Job No. 7
+  type: investment
+  institution: Vanguard
+
+b2_income:
+  budget: two
+  name: income
+  type: income
+  institution: internal
+
+b2_expense:
+  budget: two
+  name: expense
+  type: expense
+  institution: internal
+
+three:
+  budget: two
+  name: Primary Checking
+  type: asset
+  institution: Bank of America
+
+four:
+  budget: two
+  name: 401k - Boring Job No. 7
+  type: investment
+  institution: Vanguard
+
+b3_income:
+  budget: three
+  name: income
+  type: income
+  institution: internal
+
+b2_expense:
+  budget: three
+  name: expense
+  type: expense
+  institution: internal
+
+five:
+  budget: three
+  name: Checking
+  type: asset
+  institution: Wells Fargo
