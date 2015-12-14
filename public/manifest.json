@@ -37,5 +37,8 @@
 			"type": "image\/png",
 			"density": 4
 		}
-	]
+	],
+	"start_url": "https:\/\/habitualwealth.com",
+	"display": "standalone",
+	"orientation": "portrait"
 }
